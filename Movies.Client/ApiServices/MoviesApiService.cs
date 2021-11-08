@@ -22,6 +22,7 @@ namespace Movies.Client.ApiServices
                     Title = "Thour",
                     Rating = "5",
                     ReleaseDate = DateTime.Now,
+                    ImageUrl="Image/src",
                     Owner = "AhmedR. Alamoudi"
                 }
 

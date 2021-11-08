@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace Movies.Client
 {
@@ -45,6 +46,7 @@ namespace Movies.Client
                    options.ClientId = "movies_mvc_client";
                    options.ClientSecret = "secret";
                    options.ResponseType = "code";
+                   options.UsePkce = true;
 
                    options.Scope.Add("openid");
                    options.Scope.Add("profile");
@@ -54,7 +56,6 @@ namespace Movies.Client
                    options.GetClaimsFromUserInfoEndpoint = true;
 
                });
-
 
 
 
